@@ -4,5 +4,35 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Alley.unity
+    guid: 4719060e1d988984ca6cd9a0b8f3ad31
+  - enabled: 1
+    path: Assets/Scenes/Cafe.unity
+    guid: fabca5f3b8164334fba766aa03947df3
+  - enabled: 1
+    path: Assets/Scenes/Cafeteria.unity
+    guid: 91010c3e5a6218e42b2a9e2774547b71
+  - enabled: 1
+    path: Assets/Scenes/Casino.unity
+    guid: e7820f0fa9d69d34c8bb2866eaf66a10
+  - enabled: 1
+    path: Assets/Scenes/Keys Appartment.unity
+    guid: b90ee9a7b96e90640b426347e389a6c8
+  - enabled: 1
+    path: Assets/Scenes/Lab.unity
+    guid: e1dc97ceddbce974cbc5601c756a35c9
+  - enabled: 1
+    path: Assets/Scenes/Level02.unity
+    guid: 1df2dff9391749c43b9eb75739e6169d
+  - enabled: 1
+    path: Assets/Scenes/Mystery.unity
+    guid: 5b68b9337ec55c642b289bba216dec74
+  - enabled: 1
+    path: Assets/Scenes/Office.unity
+    guid: 74eff3cbbf046b24abc8ff82c1b95e99
+  - enabled: 1
+    path: Assets/Scenes/VirtualWorld.unity
+    guid: 544cc2051feff5c42be1b5f6af12ac80
   m_configObjects: {}
