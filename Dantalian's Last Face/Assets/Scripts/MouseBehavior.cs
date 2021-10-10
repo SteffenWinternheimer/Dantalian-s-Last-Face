@@ -12,6 +12,7 @@ public class MouseBehavior : MonoBehaviour
     GameObject activePanel;
     public bool isPlayerHooked;
 
+    public GameObject summonObject;
     // Update is called once per frame
     void Update()
     {
@@ -21,16 +22,17 @@ public class MouseBehavior : MonoBehaviour
             if (!EventSystem.current.IsPointerOverGameObject())           
                 CheckMouseClick();
         }
-
+        if (Input.GetMouseButtonDown(0))
+        {
+            Vector3 mousePos = Input.mousePosition;
+            SummonObject(mousePos);
+        }
     }
 
     void CheckMouseClick()
     {
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         RaycastHit2D hit = Physics2D.Raycast(ray.origin, ray.direction, Mathf.Infinity, ignoreLayer);
-
-
-
         if(hit)
         {
             if (hit.collider.tag == "PartyMember" && !isPanelActive)
@@ -39,7 +41,6 @@ public class MouseBehavior : MonoBehaviour
                 
                 Vector3 mousePos = Input.mousePosition;
                 CreatePanel(mousePos, partyMember);
-
             }
         }
         else
@@ -47,7 +48,6 @@ public class MouseBehavior : MonoBehaviour
             isPanelActive = false;
             Destroy(activePanel);
         }
-
     }
 
 
@@ -61,4 +61,9 @@ public class MouseBehavior : MonoBehaviour
         activePanel.GetComponent<PartyMemberPanel>().AssignInformationToPanel(partyMember);
     }
 
+    void SummonObject(Vector3 mousePos)
+    {
+        Vector3 objectPos = new Vector3(Camera.main.ScreenToWorldPoint(mousePos).x, Camera.main.ScreenToWorldPoint(mousePos).y,0);
+        Instantiate(summonObject, objectPos, Quaternion.identity);
+    }
 }

@@ -2521,6 +2521,8 @@ MonoBehaviour:
   canvas: {fileID: 2046394117}
   isPanelActive: 0
   isPlayerHooked: 0
+  summonObject: {fileID: 2647332956751229887, guid: c5d4b66f100dcd741bfe3eaa49c04ef1,
+    type: 3}
 --- !u!1 &1847940985
 GameObject:
   m_ObjectHideFlags: 0
