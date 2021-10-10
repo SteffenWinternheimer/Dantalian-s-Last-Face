@@ -755,7 +755,7 @@ GameObject:
   - component: {fileID: -1325136484972800993}
   m_Layer: 5
   m_Name: PartyMemberPanel
-  m_TagString: Untagged
+  m_TagString: PartyMemberPanel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -781,7 +781,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -158.00055, y: -30.391998}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 137.76245, y: 118.55527}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &398387495566024002
@@ -835,6 +835,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nameText: {fileID: 1770946801330942783}
   partyMember: {fileID: 0}
+  dropdownOptions: {fileID: 4133463275814273378}
 --- !u!1 &6908769026125652989
 GameObject:
   m_ObjectHideFlags: 0
