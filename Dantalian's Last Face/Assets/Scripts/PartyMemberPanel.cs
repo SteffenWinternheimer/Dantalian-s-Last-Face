@@ -12,7 +12,8 @@ public class PartyMemberPanel : MonoBehaviour
 
     public Dropdown dropdownOptions;
     public Text selectionText;
-
+    public bool isSnappingActive;
+    public Toggle checkBoxSnap;
     public void AssignInformationToPanel(GameObject partyMember)
     {
         this.partyMember = partyMember;
@@ -22,6 +23,8 @@ public class PartyMemberPanel : MonoBehaviour
         nameText.text = name;
         dropdownOptions.ClearOptions();
         dropdownOptions.AddOptions(memberScript.states);
+        bool isSnappingActive = partyMember.GetComponent<Snap>().enabled;
+        checkBoxSnap.isOn = partyMember.GetComponent<Snap>().enabled;
     }
 
     private void Update()
@@ -44,7 +47,7 @@ public class PartyMemberPanel : MonoBehaviour
     public void FlipCharacter()
     {
         
-        partyMember.GetComponent<SpriteRenderer>().flipX = !isFlipped;
+        partyMember.transform.GetChild(0).gameObject.GetComponent<SpriteRenderer>().flipX = !isFlipped;
         isFlipped = !isFlipped;
     }
 
@@ -52,5 +55,23 @@ public class PartyMemberPanel : MonoBehaviour
     {
         Destroy(partyMember);
         Destroy(gameObject);
+    }
+
+    public void SnapActivity()
+    {
+
+        //if (isSnappingActive)
+        //{
+        //    checkBoxSnap.isOn = true;
+        //}
+        //else
+        //{
+        //    checkBoxSnap.isOn = false;
+        //}
+
+        if (checkBoxSnap.isOn)
+            partyMember.GetComponent<Snap>().enabled = true;
+        else
+            partyMember.GetComponent<Snap>().enabled = false;
     }
 }

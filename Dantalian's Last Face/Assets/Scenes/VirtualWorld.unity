@@ -1998,7 +1998,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   partyMembers:
-  - {fileID: 7770815092031396313, guid: 57d3874c210da344cb2d9cee43e9c21e, type: 3}
+  - {fileID: 3528028840306142373, guid: aba1d08b9d788b742b55e2250d478582, type: 3}
   partySpawner: {fileID: 1216304916}
 --- !u!4 &1574666697
 Transform:

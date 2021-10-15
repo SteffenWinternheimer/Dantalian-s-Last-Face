@@ -13,7 +13,7 @@ public class PartyMember : MonoBehaviour
 
     public bool isFlippedState()
     {
-        isFlipped = gameObject.GetComponent<SpriteRenderer>().flipX;
+        isFlipped = gameObject.transform.GetChild(0).gameObject.GetComponent<SpriteRenderer>().flipX;
         return isFlipped;
     }
 

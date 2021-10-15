@@ -25,7 +25,7 @@ public class MouseBehavior : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             Vector3 mousePos = Input.mousePosition;
-            SummonObject(mousePos);
+            //SummonObject(mousePos);
         }
     }
 
@@ -56,7 +56,7 @@ public class MouseBehavior : MonoBehaviour
         activePanel = Instantiate(partyMemberPanel, mousePos, Quaternion.identity);
         activePanel.transform.SetParent(canvas.transform); 
         RectTransform transform = activePanel.GetComponent<RectTransform>();
-        transform.position = new Vector3(transform.position.x + 33, transform.position.y - 30);
+        transform.position = new Vector3(transform.position.x + 63, transform.position.y - 80);
         isPanelActive = true;
         activePanel.GetComponent<PartyMemberPanel>().AssignInformationToPanel(partyMember);
     }
